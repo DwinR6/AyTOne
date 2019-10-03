@@ -34,7 +34,17 @@ namespace AyTOne.Model
 
         public void ObtenerMision(string TipoOficial)
         {
-            throw new NotImplementedException();
+            string Respuesta;
+            if(TipoOficial == "Superior")
+            {
+                Respuesta = Mision;
+
+            }
+            else
+            {
+                Respuesta = "Informacion confidencial";
+            }
+            App.Current.MainPage.DisplayAlert("Mision", Respuesta, "ok");
         }
     }
 }
